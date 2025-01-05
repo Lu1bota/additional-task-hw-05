@@ -577,7 +577,9 @@
             </li>
           </ul>
           <!-- </div> -->
-          <button class="reviews-button" type="button">Leave a review</button>
+          <button class="reviews-button" type="button" data-modal-open>
+            Leave a review
+          </button>
         </div>
       </section>
     </main>
@@ -657,5 +659,97 @@
         <!-- </nav> -->
       </div>
     </footer>
+    <div class="backdrop" data-modal>
+      <div class="modal">
+        <button type="button" class="modal-btn-close" data-modal-close>
+          <svg class="modal-btn-close-icon" width="28" height="28">
+            <use href="./images/icons.svg#icon-x-close"></use>
+          </svg>
+        </button>
+        <p class="modal-text">
+          LEAVE A REVIEW ABOUT
+          <span class="orange">OUR CHOCOLATE</span>
+        </p>
+        <form>
+          <div class="container-modal-label">
+            <label for="user-name" class="modal-label">Name</label>
+            <div class="container-modal-input">
+              <input
+                type="text"
+                name="user-name"
+                id="user-name"
+                class="modal-input"
+                required
+              />
+              <svg class="modal-input-icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-user"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="container-modal-label">
+            <label for="user-email" class="modal-label">Email</label>
+            <div class="container-modal-input">
+              <input
+                type="email"
+                name="user-email"
+                id="user-email"
+                class="modal-input"
+                required
+              />
+              <svg class="modal-input-icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-mail"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="container-modal-label">
+            <label for="user-tel" class="modal-label">Phone number</label>
+            <div class="container-modal-input">
+              <input
+                type="tel"
+                name="user-tel"
+                id="user-tel"
+                class="modal-input"
+                required
+              />
+              <svg class="modal-input-icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-phone"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="container-modal-textarea">
+            <label for="modal-textarea" class="modal-label">Comment</label>
+            <textarea
+              name="user-comment"
+              id="modal-textarea"
+              class="modal-textarea"
+              placeholder="Enter text"
+            ></textarea>
+          </div>
+          <div class="container-checkbox">
+            <input
+              class="form-checkbox visually-hidden"
+              type="checkbox"
+              name="user-privacy"
+              id="user-privacy"
+              value="true"
+              required
+            />
+            <label for="user-privacy" class="checkbox-label">
+              <span class="castom-checkbox">
+                <svg class="castom-checkbox-icon" width="10" height="10">
+                  <use href="./images/icons.svg#icon-icon"></use>
+                </svg> </span
+              >I accept the terms and conditions of the<a
+                href=""
+                class="checkbox-link orange"
+                >Privacy Policy</a
+              >
+            </label>
+          </div>
+          <button type="submit" class="modal-btn-send">Send</button>
+        </form>
+      </div>
+    </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
